@@ -12,5 +12,7 @@ public class Notas extends AppCompatActivity {
         // Então envia um bundle com nota + disciplina pra NotasResultado ou NotasAF
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notas);
+
+        // Fiz merda
     }
 }
