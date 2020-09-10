@@ -7,6 +7,6 @@ Membros do Grupo
  - G 
  - H
  - N
- - R
+ - Roberto Nunes
  - V
- - E
+ - Exemplo de edição, faz um commit
