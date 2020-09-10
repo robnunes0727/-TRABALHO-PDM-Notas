@@ -7,5 +7,5 @@ Membros do Grupo
  - G 
  - H
  - N
- - R
+ - Roberto Nunes
  - V
