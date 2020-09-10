@@ -9,4 +9,4 @@ Membros do Grupo
  - N
  - Roberto Nunes
  - V
- - Exemplo de edição, faz um commit
+ - Agora me manda seu usuario do github e espera até aprovar a permissão
