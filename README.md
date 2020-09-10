@@ -9,4 +9,3 @@ Membros do Grupo
  - N
  - R
  - V
- - Exemplo
