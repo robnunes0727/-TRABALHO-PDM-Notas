@@ -9,4 +9,4 @@ Membros do Grupo
  - N
  - Roberto Nunes
  - V
- - Agora me manda seu usuario do github e espera até aprovar a permissão
+ - E antes de mexer no código tem que dar um UPDATE
