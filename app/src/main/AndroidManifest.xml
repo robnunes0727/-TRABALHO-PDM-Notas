@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NotasAF"></activity>
+        <activity android:name=".Creditos"></activity>
+        <activity android:name=".NotasAF" />
         <activity android:name=".NotasResultado" />
         <activity android:name=".Notas" />
         <activity android:name=".Disciplinas" />
