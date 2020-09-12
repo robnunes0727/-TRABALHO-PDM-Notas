@@ -9,6 +9,8 @@ import android.view.View;
 
 public class Creditos extends AppCompatActivity {
 
+    // Mostra os integrantes do grupo pra dificultar plágio
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Activity com os nomes do grupo e link para o código
