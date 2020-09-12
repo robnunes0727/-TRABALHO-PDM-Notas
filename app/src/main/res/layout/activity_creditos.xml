@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Creditos">
 
+    <!-- Header -->
     <TextView
         android:id="@+id/txtHeader_cred"
         android:layout_width="match_parent"
@@ -21,8 +22,8 @@
         android:layout_below="@id/txtHeader_cred"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
-        android:layout_marginLeft="5px"
+        android:textSize="15sp"
+        android:layout_marginStart="5dp"
         android:text="@string/txtMembros_cred" />
 
     <!-- Strut vazio só para ter referencia de esquerda e direita -->
@@ -40,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/txtMembros_cred"
         android:ems="10"
-        android:gravity="right"
+        android:gravity="end"
         android:inputType="textMultiLine"
         android:enabled="false"
         android:textAlignment="gravity"
