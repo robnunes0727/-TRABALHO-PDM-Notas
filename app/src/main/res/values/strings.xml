@@ -1,10 +1,27 @@
 <resources>
-    <string name="app_name">PDM-Trabalho</string>
+    <!-- Comum, prefixar com str -->
+    <string name="app_name">PDM - Notas</string>
+    <string name="strVoltar">Voltar</string>
+    <string name="strAvancar">Avançar</string>
+    <string name="strDisciplina">Disciplina</string>
+    <string name="strCalcular">Calcular</string>
+    <string name="strNotaFinal">Nota Final</string>
 
     <!-- Atividade: Créditos -->
     <string name="txtHeader_cred">Créditos</string>
     <string name="txtMembros_cred"> Integrantes do Grupo: </string>
     <string name="btnRepo_cred">Repositório do Github</string>
-    <string name="btnVoltar_cred">Voltar</string>
+
+    <!-- Atividade: Principal (MainActivity) -->
+
+
+    <!-- Atividade: Disciplinas -->
+
+
+    <!-- Atividade: Notas -->
+
+
+    <!-- Atividade: NotasResultado -->
+
 
 </resources>

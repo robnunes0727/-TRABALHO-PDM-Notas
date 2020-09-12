@@ -9,7 +9,7 @@ public class Notas extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Calculadora de notas com 2 e envia pro NotasResultado (DA PRA FAZER)
-        // Então envia um bundle com nota + disciplina pra NotasResultado ou NotasAF
+        // Então envia um bundle com nota + disciplina pra NotasResultado ou NotasAF (DA PRA FAZER)
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notas);
 

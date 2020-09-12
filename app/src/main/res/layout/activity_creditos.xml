@@ -82,7 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/bntRepo_cred"
-        android:text="@string/btnVoltar_cred"
+        android:text="@string/strVoltar"
         android:onClick="btnVoltar" />
 
 </RelativeLayout>
