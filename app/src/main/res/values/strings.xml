@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">PDM-Trabalho</string>
+
+    <!-- Atividade: Créditos -->
+    <string name="txtHeader_cred">Créditos</string>
+    <string name="txtMembros_cred"> Integrantes do Grupo: </string>
+    <string name="btnRepo_cred">Repositório do Github</string>
+    <string name="btnVoltar_cred">Voltar</string>
+
 </resources>

@@ -1,9 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Creditos">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtHeader_cred"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="55dp"
+        android:text="@string/txtHeader_cred"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorTextIcons" />
+
+    <TextView
+        android:id="@+id/txtMembros_cred"
+        android:layout_below="@id/txtHeader_cred"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:layout_marginLeft="5px"
+        android:text="@string/txtMembros_cred" />
+
+    <!-- Strut vazio só para ter referencia de esquerda e direita -->
+    <View android:id="@+id/strut_cred"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/txtMembros_cred"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Nome dos Membros -->
+    <EditText
+        android:id="@+id/edtNomes_cred"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtMembros_cred"
+        android:ems="10"
+        android:gravity="right"
+        android:inputType="textMultiLine"
+        android:enabled="false"
+        android:textAlignment="gravity"
+        android:layout_alignRight="@id/strut_cred"
+        android:layout_alignParentLeft="true"
+        android:text="Greyce Besinger\nHeloíza Bartulic\nNicholas Henrique\nRoberto Nunes\nVictor Brossa" />
+
+    <!-- RGM dos Membros -->
+    <EditText
+        android:id="@+id/edtRGM_cred"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/edtNomes_cred"
+        android:layout_below="@id/txtMembros_cred"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:enabled="false"
+        android:layout_alignParentRight="true"
+        android:text="00000000\n00000000\n00000000\n21267588\n00000000" />
+                   <!-- Greyce\n Heloiza\nNicholas\n Roberto\n  Victor -->
+
+    <!-- Botão GitHub -->
+    <Button
+        android:id="@+id/bntRepo_cred"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtRGM_cred"
+        android:text="@string/btnRepo_cred"
+        android:onClick="btnGithub" />
+
+    <!-- Botão voltar -->
+    <Button
+        android:id="@+id/bntVoltar_cred"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bntRepo_cred"
+        android:text="@string/btnVoltar_cred"
+        android:onClick="btnVoltar" />
+
+</RelativeLayout>
