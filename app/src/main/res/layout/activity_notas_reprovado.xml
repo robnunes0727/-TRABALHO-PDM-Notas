@@ -10,19 +10,21 @@
         android:id="@+id/txtDiciplina_notas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:textStyle="bold"
+        android:text="@string/txtDiciplina_notas" />
 
     <Spinner
         android:id="@+id/spinnerDiciplinas"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:entries="@array/spinnerDiciplinas" />
 
     <TextView
         android:id="@+id/txtNotaA1_notas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:text="TextView" />
+        android:text="@string/txtNotaA1_notas" />
 
     <EditText
         android:id="@+id/edtNotaA1_notas"
@@ -35,7 +37,8 @@
         android:id="@+id/txtNotaA2_notas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:textStyle="bold"
+        android:text="@string/txtNotaA2_notas" />
 
     <EditText
         android:id="@+id/edtNotaA2_notas"
@@ -48,7 +51,8 @@
         android:id="@+id/txtNotaAF_notas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:textStyle="bold"
+        android:text="@string/txtNotaAF_notas" />
 
     <EditText
         android:id="@+id/edtNotaAF_notas"
@@ -62,5 +66,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtNotaAF_notas"
-        android:text="Button" />
+        android:textAlignment="center"
+        android:text="@string/btnCalcular" />
 </RelativeLayout>

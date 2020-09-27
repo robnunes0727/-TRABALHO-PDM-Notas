@@ -22,6 +22,16 @@
 
 
     <!-- Atividade: NotasResultado -->
+    <string name="txtDiciplina_notas">Disciplina</string>
+   <string-array name="spinnerDiciplinas">
+       <item>BIG DATA</item>
+       <item>DATA SCIENCE</item>
+       <item>B.I</item>
+   </string-array>
+    <string name="txtNotaA1_notas">Nota A1</string>
+    <string name="txtNotaA2_notas">Nota A2</string>
+    <string name="txtNotaAF_notas">Nota AF</string>
+    <string name="btnCalcular">Cakcular Nota Final</string>
 
 
 </resources>
