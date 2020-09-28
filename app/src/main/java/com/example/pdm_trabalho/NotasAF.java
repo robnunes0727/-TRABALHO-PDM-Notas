@@ -79,7 +79,7 @@ public class NotasAF extends AppCompatActivity {
             Toast.makeText(this,"Fui...",Toast.LENGTH_LONG).show();
         }
 
-        public void spinnerDiciplinasOnClick(View v) {
+        public void spinnerDisciplinasOnClick(View v) {
             Intent novoTexto = new Intent(this, Disciplina.class);
 
             // Passando parâmetros

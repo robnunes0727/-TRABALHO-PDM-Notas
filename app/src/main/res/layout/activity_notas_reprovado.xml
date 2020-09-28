@@ -7,24 +7,24 @@
     tools:context=".NotasAF">
 
     <TextView
-        android:id="@+id/txtDiciplina_notas"
+        android:id="@+id/txtDisciplina_notas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:text="@string/txtDiciplina_notas" />
 
     <Spinner
-        android:id="@+id/spinnerDiciplinas"
+        android:id="@+id/spinnerDisciplinas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtDiciplina_notas"
-        android:onClick="spinnerDiciplinasOnClick" />
+        android:layout_below="@+id/txtDisciplina_notas"
+        android:onClick="spinnerDisciplinasOnClick" />
 
     <TextView
         android:id="@+id/txtNotaA1_notas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spinnerDiciplinas"
+        android:layout_below="@+id/spinnerDisciplinas"
         android:textStyle="bold"
         android:text="@string/txtNotaA1_notas" />
 
