@@ -17,12 +17,14 @@
         android:id="@+id/spinnerDiciplinas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/spinnerDiciplinas" />
+        android:layout_below="@+id/txtDiciplina_notas"
+        android:onClick="spinnerDiciplinasOnClick" />
 
     <TextView
         android:id="@+id/txtNotaA1_notas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerDiciplinas"
         android:textStyle="bold"
         android:text="@string/txtNotaA1_notas" />
 
@@ -37,6 +39,7 @@
         android:id="@+id/txtNotaA2_notas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/edtNotaA1_notas"
         android:textStyle="bold"
         android:text="@string/txtNotaA2_notas" />
 
@@ -51,6 +54,7 @@
         android:id="@+id/txtNotaAF_notas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/edtNotaA2_notas"
         android:textStyle="bold"
         android:text="@string/txtNotaAF_notas" />
 

@@ -2,6 +2,7 @@ package com.example.pdm_trabalho;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,5 +47,15 @@ public class NotasAF extends AppCompatActivity {
 
             }
         }));
+
+        public void spinnerDiciplinasOnClick(View v) {
+            Intent novoTexto = new Intent(this, Disciplina.class);
+
+            // Passando parâmetros
+            Bundle bundle = new Bundle();
+            bundle.putString("nome", "João");
+            bundle.putInt("idade", 42);
+            startActivity(disciplinaActivity.putExtras(bundle));
+        }
     }
 }
