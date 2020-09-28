@@ -21,7 +21,7 @@ public class NotasAF extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notas_reprovado);
 
-        activity_notas_reprovados_spinner_Diciplinas = findViewById(R.id.spinnerDiciplinas);
+        activity_notas_reprovados_spinner_Diciplinas = findViewById(R.id.spinnerDisciplinas);
 
 
         final EditText edtNotaA1_notas = (EditText) findViewById(R.id.edtNotaA1_notas);

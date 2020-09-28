@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:text="@string/txtDiciplina_notas" />
+        android:text="@string/txtDisciplina_notas" />
 
     <Spinner
         android:id="@+id/spinnerDisciplinas"
