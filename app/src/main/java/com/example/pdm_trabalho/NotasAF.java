@@ -2,6 +2,7 @@ package com.example.pdm_trabalho;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class NotasAF extends AppCompatActivity {
@@ -25,6 +26,18 @@ public class NotasAF extends AppCompatActivity {
 
         então, refazer o pacote com as novas notas (e afBool true) e mandar para NotasResultado
          */
+
+
+        Intent pacoteNotas = getIntent();
+        Bundle parametros = pacoteNotas.getExtras();
+
+        double notaA1 = parametros.getDouble("notaA1");
+        double notaA2 = parametros.getDouble("notaA2");
+        double notaAF = parametros.getDouble("notaAF");
+        double notaFinal = parametros.getDouble("notaFinal");
+        String disciplina = parametros.getString("disciplina");
+        boolean afBool = parametros.getBoolean("afBoll");
+
 
     }
 }
