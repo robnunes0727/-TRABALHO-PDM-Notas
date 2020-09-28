@@ -14,7 +14,7 @@
         android:text="@string/txtDisciplina_notas" />
 
     <TextView
-         android:id="@+id/txtDisciplinas"
+        android:id="@+id/txtDisciplinas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtDisciplina_notas"
