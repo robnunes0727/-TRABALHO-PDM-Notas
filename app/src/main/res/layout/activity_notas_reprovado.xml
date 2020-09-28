@@ -17,8 +17,7 @@
         android:id="@+id/spinnerDisciplinas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtDisciplina_notas"
-        android:onClick="spinnerDisciplinasOnClick" />
+        android:layout_below="@+id/txtDisciplina_notas" />
 
     <TextView
         android:id="@+id/txtNotaA1_notas"
