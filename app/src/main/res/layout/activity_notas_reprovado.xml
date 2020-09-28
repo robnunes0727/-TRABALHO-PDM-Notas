@@ -13,17 +13,18 @@
         android:textStyle="bold"
         android:text="@string/txtDisciplina_notas" />
 
-    <Spinner
-        android:id="@+id/spinnerDisciplinas"
+    <TextView
+        android:id="@+id/txtDisciplinas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtDisciplina_notas" />
+        android:layout_below="@+id/txtDisciplina_notas"
+        android:text=""/>
 
     <TextView
         android:id="@+id/txtNotaA1_notas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spinnerDisciplinas"
+        android:layout_below="@+id/txtDisciplinas"
         android:textStyle="bold"
         android:text="@string/txtNotaA1_notas" />
 
