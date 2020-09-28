@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class NotasAF extends AppCompatActivity {
 
@@ -47,6 +48,36 @@ public class NotasAF extends AppCompatActivity {
 
             }
         }));
+
+        @Override
+        protected void onStart() {
+            super.onStart();
+            Toast.makeText(this,"Executando onStart!",Toast.LENGTH_LONG).show();
+        }
+
+        @Override
+        protected void onResume() {
+            super.onResume();
+            Toast.makeText(this,"Executando onResume!",Toast.LENGTH_LONG).show();
+        }
+
+        @Override
+        protected void onPause() {
+            super.onPause();
+            Toast.makeText(this,"Executando onPause!",Toast.LENGTH_LONG).show();
+        }
+
+        @Override
+        protected void onStop() {
+            super.onStop();
+            Toast.makeText(this,"Socorro!",Toast.LENGTH_LONG).show();
+        }
+
+        @Override
+        protected void onDestroy() {
+            super.onDestroy();
+            Toast.makeText(this,"Fui...",Toast.LENGTH_LONG).show();
+        }
 
         public void spinnerDiciplinasOnClick(View v) {
             Intent novoTexto = new Intent(this, Disciplina.class);
