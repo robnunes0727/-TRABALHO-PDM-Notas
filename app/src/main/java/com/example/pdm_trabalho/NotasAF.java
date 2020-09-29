@@ -14,8 +14,6 @@ public class NotasAF extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Calculadora de notas com 3 (DA PRA FAZER VISUAL)
-        // Menor nota é substituida pela nota da AF (DA PRA FAZER COM JAVA)
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notas_reprovado);
 
@@ -34,34 +32,24 @@ public class NotasAF extends AppCompatActivity {
                 Double notaA2 = Double.parseDouble(edtNotaA2.getText().toString());
 
                 // Calculo a nota final
-                Double notaFinal = notaA1 + notaA2;
+                Double notaFinal = notaA1 + notaA2; // notaFinal = (vem do bundle)
                 Double notaA1AF = notaA1 + notaAF;
                 Double notaA2AF = notaAF + notaA1;
 
                 // Atualizando a tela
                 txtNotaFinal.setText(notaFinal.toString());
-                if (notaFinal >= notaA1AF e notaA2AF) {
+                if (notaFinal >= ((notaA1AF) && (notaA2AF))) {
                     txtSituacao.setText("Aprovado");
                     txtSituacao.setTextColor(getColor(R.color.colorAprovado));
-                } else (notaA1AF >= notaFinal e notaA2AF){
+                } else if (notaA1AF >= ((notaFinal) && (notaA2AF))){
+                    txtSituacao.setText("Reprovado");
+                    txtSituacao.setTextColor(getColor(R.color.colorReprovado));
+                } else (notaA2AF >= ((notaFinal)&& (notaA1AF))){
                     txtSituacao.setText("Reprovado");
                     txtSituacao.setTextColor(getColor(R.color.colorReprovado));
                 }
             }
         });
-
-        /* Conta para nota:
-        notaFinal = (vem do bundle)
-        notaA1AF = notaA1 + notaAF
-        notaA2AF = notaAF + notaA1
-
-        depois testar com ifs:
-        notaFinal é maior igual que A1AF e A2AF?
-        else notaA1AF é maior igual que notaFinal e A2AF?
-        else notaA2AF é maior igual que notaFinal e A1AF?
-
-        então, refazer o pacote com as novas notas (e afBool true) e mandar para NotasResultado
-         */
 
 
         Intent pacoteNotas = getIntent();
