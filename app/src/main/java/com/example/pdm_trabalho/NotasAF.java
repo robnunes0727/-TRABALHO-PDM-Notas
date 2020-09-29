@@ -10,8 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class NotasAF extends AppCompatActivity {
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,48 +23,55 @@ public class NotasAF extends AppCompatActivity {
         final EditText edtNotaA1 = (EditText) findViewById(R.id.edtNotaA1_notas);
         final EditText edtNotaA2 = (EditText) findViewById(R.id.edtNotaA2_notas);
         final EditText edtNotaAF = (EditText) findViewById(R.id.edtNotaAF_notas);
-        final TextView txtNotaFinal = (TextView) findViewById(R.id.txtNotaFinal);
-        final TextView txtSituacao = (TextView) findViewById(R.id.txtSituacao);
+        final TextView txtDisc   = findViewById(R.id.txtDisciplinas);
         Button btnCalcular = (Button) findViewById(R.id.btnCalcular);
-
-        btnCalcular.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("ResourceAsColor")
-            public void onClick(View v) {
-                // Pegando o valor digitado nos campos EditText
-                Double notaA1 = Double.parseDouble(edtNotaA1.getText().toString());
-                Double notaA2 = Double.parseDouble(edtNotaA2.getText().toString());
-
-                // Calculo a nota final
-                Double notaFinal = notaA1 + notaA2; // notaFinal = (vem do bundle)
-                Double notaA1AF = notaA1 + notaAF;
-                Double notaA2AF = notaAF + notaA1;
-
-                // Atualizando a tela
-                txtNotaFinal.setText(notaFinal.toString());
-                if (notaFinal >= ((notaA1AF) && (notaA2AF))) {
-                    txtSituacao.setText("Aprovado");
-                    txtSituacao.setTextColor(getColor(R.color.colorAprovado));
-                } else if (notaA1AF >= ((notaFinal) && (notaA2AF))){
-                    txtSituacao.setText("Reprovado");
-                    txtSituacao.setTextColor(getColor(R.color.colorReprovado));
-                } else (notaA2AF >= ((notaFinal)&& (notaA1AF))){
-                    txtSituacao.setText("Reprovado");
-                    txtSituacao.setTextColor(getColor(R.color.colorReprovado));
-                }
-            }
-        });
-
 
         Intent pacoteNotas = getIntent();
         Bundle parametros = pacoteNotas.getExtras();
 
-        double notaA1 = parametros.getDouble("notaA1");
-        double notaA2 = parametros.getDouble("notaA2");
-        double notaAF = parametros.getDouble("notaAF");
-        double notaFinal = parametros.getDouble("notaFinal");
-        String disciplina = parametros.getString("disciplina");
-        boolean afBool = parametros.getBoolean("afBoll");
+        final double notaA1 = parametros.getDouble("notaA1");
+        final double notaA2 = parametros.getDouble("notaA2");
+        final String disciplina = parametros.getString("disciplina");
 
+        // Preenchendo o valor que chegou no bundle
+        txtDisc.setText(disciplina);
+        edtNotaA1.setText(Double.toString(notaA1));
+        edtNotaA2.setText(Double.toString(notaA2));
 
+        btnCalcular.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Recebendo o valor da AF
+                double notaAF = Double.parseDouble(edtNotaAF.getText().toString());
+
+                // Calculo a nota final
+                double notaFinal = notaA1 + notaA2;
+                double notaA1AF = notaA1 + notaAF;
+                double notaA2AF = notaAF + notaA1;
+
+                // Atualizando a tela
+                if (notaFinal >= notaA1AF && notaFinal >= notaA2AF) {
+                    notaFinal = notaFinal*1; // Só pra condição não ficar vazia
+                } else if (notaA1AF >= notaFinal && notaA1AF >= notaA2AF){
+                    notaFinal = notaA1AF;
+                } else if (notaA2AF >= notaFinal && notaA2AF >= notaA1AF){
+                    notaFinal = notaA2AF;
+                }
+
+                // Refaz o bundle
+                Intent novaActivity = new Intent(v.getContext(), NotasResultado.class);
+
+                // Passando parâmetros
+                Bundle bundle = new Bundle();
+                bundle.putDouble("notaA1", notaA1);
+                bundle.putDouble("notaA2", notaA2);
+                bundle.putDouble("notaAF", notaAF);
+                bundle.putDouble("notaFinal", notaFinal);
+                bundle.putString("disciplina", disciplina);
+                bundle.putBoolean("afBool", true);
+
+                startActivity(novaActivity.putExtras(bundle));
+
+            }
+        });
     }
 }
