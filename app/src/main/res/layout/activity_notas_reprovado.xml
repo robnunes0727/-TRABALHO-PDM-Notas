@@ -72,4 +72,24 @@
         android:layout_below="@+id/edtNotaAF_notas"
         android:textAlignment="center"
         android:text="@string/btnCalcular" />
+
+    <TextView
+        android:id="@+id/txtNotaFinal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCalcular"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/txtSituacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNotaFinal"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/colorAprovado"
+        android:text="" />
+
 </RelativeLayout>

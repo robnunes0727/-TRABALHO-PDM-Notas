@@ -9,4 +9,6 @@
     <color name="colorSecondaryText">#757575</color>
     <color name="colorDivider">#BDBDBD</color>
     <color name="Verde_claro">#7FFFD4</color>
+    <color name="colorAprovado">#0000FF</color>
+    <color name="colorReprovado">#FF0000</color>
 </resources>
