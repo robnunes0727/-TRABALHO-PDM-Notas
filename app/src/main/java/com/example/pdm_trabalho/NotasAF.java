@@ -70,7 +70,6 @@ public class NotasAF extends AppCompatActivity {
                 bundle.putBoolean("afBool", true);
 
                 startActivity(novaActivity.putExtras(bundle));
-
             }
         });
     }
