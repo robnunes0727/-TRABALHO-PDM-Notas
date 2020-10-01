@@ -75,6 +75,7 @@ public class NotasAF extends AppCompatActivity {
                 bundle.putString("disciplina", disciplina);
                 bundle.putBoolean("afBool", true);
 
+                // Começa a nova activity
                 startActivity(novaActivity.putExtras(bundle));
             }
         });
