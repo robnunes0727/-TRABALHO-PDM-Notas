@@ -10,15 +10,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class NotasAF extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notas_reprovado);
+        setContentView(R.layout.NotasAF);
 
         final EditText edtNotaA1 = (EditText) findViewById(R.id.edtNotaA1_notas);
         final EditText edtNotaA2 = (EditText) findViewById(R.id.edtNotaA2_notas);
