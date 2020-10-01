@@ -16,7 +16,7 @@ public class NotasAF extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.NotasAF);
+        setContentView(R.layout.activity_notas_af);
 
         final EditText edtNotaA1 = (EditText) findViewById(R.id.edtNotaA1_notas);
         final EditText edtNotaA2 = (EditText) findViewById(R.id.edtNotaA2_notas);
