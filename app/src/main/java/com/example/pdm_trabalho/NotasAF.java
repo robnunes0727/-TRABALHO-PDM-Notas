@@ -24,7 +24,8 @@ public class NotasAF extends AppCompatActivity {
         final EditText edtNotaA2 = (EditText) findViewById(R.id.edtNotaA2_notas);
         final EditText edtNotaAF = (EditText) findViewById(R.id.edtNotaAF_notas);
         final TextView txtDisc   = findViewById(R.id.txtDisciplinas);
-        Button btnCalcular = (Button) findViewById(R.id.btnCalcular);
+        final Button btnCalcular = (Button) findViewById(R.id.btnCalcular);
+        final Button btnVoltar = findViewById(R.id.btnVoltar);
 
         Intent pacoteNotas = getIntent();
         Bundle parametros = pacoteNotas.getExtras();
@@ -37,6 +38,13 @@ public class NotasAF extends AppCompatActivity {
         txtDisc.setText(disciplina);
         edtNotaA1.setText(Double.toString(notaA1));
         edtNotaA2.setText(Double.toString(notaA2));
+
+        btnVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

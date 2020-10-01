@@ -9,18 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Creditos"></activity>
-        <activity android:name=".NotasAF" />
-        <activity android:name=".NotasResultado" />
-        <activity android:name=".Notas" />
-        <activity android:name=".Disciplinas" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Creditos"> </activity>
+        <activity android:name=".NotasAF"> </activity>
+        <activity android:name=".NotasResultado"> </activity>
+        <activity android:name=".Notas"> </activity>
+        <activity android:name=".Disciplinas">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"> </activity>
     </application>
 
 </manifest>

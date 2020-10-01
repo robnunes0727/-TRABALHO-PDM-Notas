@@ -77,4 +77,13 @@
         android:layout_below="@+id/edtNotaAF_notas"
         android:textAlignment="center"
         android:text="@string/btnCalcular" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/strVoltar"
+        android:layout_below="@id/btnCalcular"/>
+
+
 </RelativeLayout>

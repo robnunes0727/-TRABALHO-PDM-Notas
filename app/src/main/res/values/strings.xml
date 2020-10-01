@@ -16,7 +16,8 @@
 
 
     <!-- Atividade: Disciplinas -->
-
+    <string name="btnInserir">Inserir</string>
+    <string name="edtDisciplina">Digite a disciplina</string>
 
     <!-- Atividade: Notas -->
     <string name="txtDisciplina_notas">Disciplina</string>
