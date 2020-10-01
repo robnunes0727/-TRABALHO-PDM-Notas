@@ -48,6 +48,7 @@ public class Disciplinas extends ListActivity {
     }
 
     public void btnInserir(View view){
+        // Puxa o texto do componente
         String disc = edtDisciplina.getText().toString();
 
         // Se não vazio, adiciona o texto pra lista, else mostra erro
