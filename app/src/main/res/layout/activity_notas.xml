@@ -58,4 +58,12 @@
         android:layout_below="@id/edtNotaA2"
         android:text="@string/btnCalcular" />
 
+    <Button
+        android:id="@+id/btnVoltarDisciplinas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/btnVoltarDisciplinas"
+        android:onClick="btnVoltarDisciplinas" />
+
 </RelativeLayout>

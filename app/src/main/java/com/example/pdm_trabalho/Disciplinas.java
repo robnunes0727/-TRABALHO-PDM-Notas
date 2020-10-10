@@ -28,14 +28,19 @@ public class Disciplinas extends ListActivity {
 
         // Coloca o componente na variavel
         edtDisciplina = findViewById(R.id.edtDisciplina);
+        Intent intent = getIntent();
 
         // Abre as SharedPrefs
         SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("com.example.pdm_trabalho.PREFERENCE_FILE_KEY", Context.MODE_PRIVATE);
 
-        // Coloca SharedPrefs na lista
+        // Procura disciplinas na sharedprefs
         discSet = sharedPref.getStringSet("lista_de_disciplinas", null);
-        if(discSet != null &&!discSet.isEmpty())
-            disciplinas.addAll(discSet);
+        if(discSet != null && !discSet.isEmpty()) {
+                // Se a lista estiver preenchida, pular essa activity
+                disciplinas.addAll(discSet);
+                Intent novaActivity = new Intent(this, Notas.class);
+                startActivity(novaActivity);
+        }
 
         atualizarLista();
         edtDisciplina.setText("");
@@ -63,8 +68,8 @@ public class Disciplinas extends ListActivity {
     }
 
     public void btnVoltar(View v){
-        // Fecha a activity
-        finish();
+        // Volta a activity
+        super.onBackPressed();
     }
 
     public void btnAvancar(View v){

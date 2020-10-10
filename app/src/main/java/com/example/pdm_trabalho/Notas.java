@@ -83,4 +83,9 @@ public class Notas extends AppCompatActivity {
             }
         });
     }
+
+    public void btnVoltarDisciplinas(View v){
+        // Volta a activity
+        super.onBackPressed();
+    }
 }

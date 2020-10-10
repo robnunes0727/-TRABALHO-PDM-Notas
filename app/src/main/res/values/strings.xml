@@ -25,6 +25,7 @@
     <string name="txtNotaA2_notas">Nota A2</string>
     <string name="txtNotaAF_notas">Nota AF</string>
     <string name="btnCalcular">Calcular Nota Final</string>
+    <string name="btnVoltarDisciplinas">Alterar disciplinas</string>
 
     <!-- Atividade: Resultado -->
 
