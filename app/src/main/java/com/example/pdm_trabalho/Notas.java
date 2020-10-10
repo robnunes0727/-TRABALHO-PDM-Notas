@@ -82,4 +82,5 @@ public class Notas extends AppCompatActivity {
                 startActivity(novaActivity.putExtras(bundle));
             }
         });
-} }
+    }
+}
