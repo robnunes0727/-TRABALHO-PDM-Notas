@@ -10,13 +10,21 @@
         android:id="@+id/txtDisciplinas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="@string/txtDisciplina_notas" />
+
+    <Spinner
+        android:id="@+id/spnDisciplina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDisciplinas" />
 
     <TextView
         android:id="@+id/txtNotaA1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
+        android:layout_below="@id/spnDisciplina"
         android:text="@string/txtNotaA1_notas" />
 
     <EditText
@@ -48,16 +56,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/edtNotaA2"
-        android:text="@string/btnCalcular"
-        android:onClick="btnCalcularOnClick"/>
-
-    <TextView
-        android:id="@+id/txtNotaFinal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnCalcular"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:text="TextView"/>
+        android:text="@string/btnCalcular" />
 
 </RelativeLayout>
