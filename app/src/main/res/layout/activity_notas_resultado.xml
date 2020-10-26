@@ -1,9 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NotasResultado">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtDisciplina_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/txtDisciplina_res"/>
+
+    <TextView
+        android:id="@+id/txtNotaFinal_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/txtNotaFinal_res"/>
+
+    <EditText
+        android:id="@+id/edtDisciplina_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDisciplina_res"
+        android:inputType="textPersonName"
+        android:enabled="false" />
+
+    <EditText
+        android:id="@+id/edtNotaFinal_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNotaFinal_res"
+        android:inputType="numberDecimal"
+        android:enabled="false" />
+
+    <TextView
+        android:id="@+id/txtResultado_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:text="@string/strVoltar"
+        android:onClick="btnVoltar"/>
+
+</RelativeLayout>

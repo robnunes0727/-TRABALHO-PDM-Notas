@@ -28,6 +28,9 @@
     <string name="btnVoltarDisciplinas">Alterar disciplinas</string>
 
     <!-- Atividade: Resultado -->
+    <string name="txtDisciplina_res">Disciplina</string>
+    <string name="txtNotaFinal_res">Nota Final</string>
+    <string name="btnVoltar">Voltar</string>
 
 
 
