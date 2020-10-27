@@ -2,19 +2,106 @@ package com.example.pdm_trabalho;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Nessa classe o aluno colocará: RGM, NOME, CURSO, TURMA. (JA DA PRA FAZER)
-    // Tem um botão que abre Disciplinas (JA DA PRA FAZER)
-    // Ela então salva os dados (NÃO ENSINADO)
+    private EditText edtRA;
+    private EditText edtNome;
+    private EditText edtTurma;
+    private Spinner cmbCurso;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Instancia os atributos
+        edtRA       = findViewById(R.id.edtRA);
+        edtNome     = findViewById(R.id.edtNome);
+        edtTurma    = findViewById(R.id.edtTurma);
+        cmbCurso    = findViewById(R.id.cmbCurso);
+
+        // Abre as SharedPrefs
+        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("com.example.pdm_trabalho.PREFERENCE_FILE_KEY", Context.MODE_PRIVATE);
+
+        // Preenche Spinner
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.cursos_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        cmbCurso.setAdapter(adapter);
+
+        // Procura dados na sharedprefs
+        String nome = sharedPref.getString("nome_aluno", null);
+        if(nome != null && !nome.isEmpty()) {
+            // Se a lista estiver preenchida, preencher os campos e pular activity
+            edtRA.setText(sharedPref.getString("ra_aluno", null));
+            edtNome.setText(nome);
+            edtTurma.setText(sharedPref.getString("turma_aluno", null));
+            cmbCurso.setSelection(adapter.getPosition(sharedPref.getString("curso_aluno", null)));
+
+            Intent novaActivity = new Intent(this, Disciplinas.class);
+            startActivity(novaActivity);
+        }
+    }
+
+    public void btnDesistir(View v){
+        // Retorna como se tivesse apertado back
+        super.onBackPressed();
+    }
+
+    public void btnAvancar(View v){
+        // Abre preferencias
+        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("com.example.pdm_trabalho.PREFERENCE_FILE_KEY", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+
+        // Puxa texto, grava senão estiver vazio
+        String numRA = edtRA.getText().toString().trim();
+        if(!numRA.isEmpty())
+            editor.putString("ra_aluno", numRA);
+        else {
+            Toast.makeText(v.getContext(), "RA vazio!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Puxa texto, grava senão estiver vazio
+        String nome = edtNome.getText().toString().trim();
+        if (!nome.isEmpty())
+            editor.putString("nome_aluno", nome);
+        else {
+            Toast.makeText(v.getContext(), "Nome vazio!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Puxa texto, grava senão estiver vazio
+        String turma = edtTurma.getText().toString().trim();
+        if (!turma.isEmpty())
+            editor.putString("turma_aluno", turma);
+        else {
+            Toast.makeText(v.getContext(), "Turma vazio!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Puxa texto, grava senão estiver vazio
+        String curso = cmbCurso.getSelectedItem().toString().trim();
+        if (!curso.equals("-- SELECIONE --") && !curso.isEmpty())
+            editor.putString("curso_aluno", curso);
+        else {
+            Toast.makeText(v.getContext(), "Selecione um curso!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        editor.apply();
+
+        Intent novaActivity = new Intent(v.getContext(), Disciplinas.class);
+        startActivity(novaActivity);
     }
 }

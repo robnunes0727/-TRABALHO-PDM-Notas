@@ -13,11 +13,27 @@
     <string name="btnRepo_cred">Repositório do Github</string>
 
     <!-- Atividade: Principal (MainActivity) -->
+    <string name="txtRA">RA</string>
+    <string name="txtNome">Nome Completo</string>
+    <string name="txtCurso">Curso</string>
+    <string name="txtTurma">Turma</string>
+    <string name="btnDesistir">Desistir</string>
+    <string-array name="cursos_array">
+        <item>-- SELECIONE --</item>
+        <item>Ciência da Computação</item>
+        <item>Análise e Desenvolvimento de Sistemas</item>
+        <item>Medicina</item>
+        <item>Odontologia</item>
+        <item>Gestão de Tecnologia da Informação</item>
+        <item>Administração</item>
+        <item>Engenharia de Computação</item>
+    </string-array>
 
 
     <!-- Atividade: Disciplinas -->
     <string name="btnInserir">Inserir</string>
     <string name="edtDisciplina">Digite a disciplina</string>
+
 
     <!-- Atividade: Notas -->
     <string name="txtDisciplina_notas">Disciplina</string>

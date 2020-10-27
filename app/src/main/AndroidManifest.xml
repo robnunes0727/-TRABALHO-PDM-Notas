@@ -13,13 +13,13 @@
         <activity android:name=".NotasAF"> </activity>
         <activity android:name=".NotasResultado"> </activity>
         <activity android:name=".Notas"> </activity>
-        <activity android:name=".Disciplinas">
+        <activity android:name=".Disciplinas"> </activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"> </activity>
     </application>
 
 </manifest>

@@ -1,86 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Verde_claro"
+    tools:ignore="LabelFor"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/txtRA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtRA" />
 
-    <Button
-        android:id="@+id/btnAvancar"
+    <EditText
+        android:id="@+id/edtRA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@id/txtRA"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/txtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtRA"
+        android:text="@string/txtNome" />
+
+    <EditText
+        android:id="@+id/edtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@id/txtNome"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/txtCurso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtCurso"
+        android:layout_below="@id/edtNome"/>
+
+    <Spinner
+        android:id="@+id/cmbCurso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCurso"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/txtTurma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Avançar"
-        tools:layout_editor_absoluteX="261dp"
-        tools:layout_editor_absoluteY="523dp" />
-
-    <Button
-        android:id="@+id/btnCancelar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cancelar"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="522dp" />
-
-    <TextView
-        android:id="@+id/RA"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RA:"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="24dp" />
+        android:text="@string/txtTurma"
+        android:layout_below="@id/cmbCurso" />
 
     <EditText
-        android:id="@+id/editTxtRA"
+        android:id="@+id/edtTurma"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="61dp" />
+        android:layout_below="@id/txtTurma"
+        android:maxLength="2"
+        android:importantForAutofill="no" />
 
-    <TextView
-        android:id="@+id/editTxtNome"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nome:"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="130dp" />
+        android:layout_below="@id/edtTurma"
+        android:gravity="center" >
 
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="166dp" />
+        <Button
+            android:id="@+id/btnDesistir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/btnDesistir"
+            android:onClick="btnDesistir" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Curso"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="226dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Turma:"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="365dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="416dp" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btnAvancar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/strAvancar"
+            android:onClick="btnAvancar" />
+    </LinearLayout>
+</RelativeLayout>
