@@ -62,9 +62,24 @@ public class Notas extends AppCompatActivity {
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceAsColor")
             public void onClick(View v) {
+                String n1 = edtNotaA1.getText().toString().trim();
+                String n2 = edtNotaA2.getText().toString().trim();
+
+                // Checa se vazio
+                if (n1.isEmpty() || n2.isEmpty()) {
+                    Toast.makeText(v.getContext(), "Campos vazios!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 // Pegando o valor digitado nos campos EditText
-                double NotaA1 = Double.parseDouble(edtNotaA1.getText().toString());
-                double NotaA2 = Double.parseDouble(edtNotaA2.getText().toString());
+                double NotaA1 = Double.parseDouble(n1);
+                double NotaA2 = Double.parseDouble(n2);
+
+                // Checa se os valores são válidos
+                if (NotaA1 < 0 ||NotaA1 > 5 || NotaA2 < 0 || NotaA2 > 5) {
+                    Toast.makeText(v.getContext(), "Notas inválidas!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 // Calculo a nota final
                 double NotaFinal = NotaA1 + NotaA2;
