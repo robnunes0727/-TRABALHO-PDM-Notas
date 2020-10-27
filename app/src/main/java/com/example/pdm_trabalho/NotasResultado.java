@@ -15,12 +15,6 @@ import android.widget.TextView;
 
 public class NotasResultado extends AppCompatActivity {
 
-    private EditText edtDisciplina;
-    private EditText edtNotaFinal;
-    private TextView txtDisciplina;
-    private TextView txtNotaFinal;
-    private TextView txtResultado;
-    private Button btnAF;
     private Button btnVoltar;
     private Bundle parametros;
 
@@ -32,11 +26,9 @@ public class NotasResultado extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notas_resultado);
 
-        edtDisciplina = findViewById(R.id.edtDisciplina_res);
-        edtNotaFinal = findViewById(R.id.edtNotaFinal_res);
-        txtDisciplina = findViewById(R.id.txtDisciplina_res);
-        txtNotaFinal = findViewById(R.id.txtNotaFinal_res);
-        txtResultado = findViewById(R.id.txtResultado_res);
+        EditText edtDisciplina = findViewById(R.id.edtDisciplina_res);
+        EditText edtNotaFinal = findViewById(R.id.edtNotaFinal_res);
+        TextView txtResultado = findViewById(R.id.txtResultado_res);
         btnVoltar    = findViewById(R.id.btnVoltar);
 
         Intent pacoteNotas = getIntent();
@@ -73,7 +65,7 @@ public class NotasResultado extends AppCompatActivity {
 
     protected void mudancasAF(){
         // Criando botão de calcular AF
-        btnAF = new Button(this);
+        Button btnAF = new Button(this);
         btnAF.setText(R.string.btnAF);
         btnAF.setId(View.generateViewId());
 
