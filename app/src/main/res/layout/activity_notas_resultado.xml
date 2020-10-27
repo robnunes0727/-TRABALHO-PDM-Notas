@@ -48,8 +48,7 @@
         android:layout_below="@+id/edtNotaFinal_res"
         android:gravity="center"
         android:textSize="11pt"
-        android:textStyle="bold"
-        android:text="Congrats!"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnVoltar"
