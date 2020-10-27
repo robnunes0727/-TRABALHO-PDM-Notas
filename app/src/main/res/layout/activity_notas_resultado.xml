@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:ignore="LabelFor"
     tools:context=".NotasResultado">
 
     <TextView
@@ -12,6 +13,15 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:text="@string/txtDisciplina_res"/>
+
+    <EditText
+        android:id="@+id/edtDisciplina_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDisciplina_res"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/txtNotaFinal_res"
@@ -22,35 +32,30 @@
         android:text="@string/txtNotaFinal_res"/>
 
     <EditText
-        android:id="@+id/edtDisciplina_res"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtDisciplina_res"
-        android:inputType="textPersonName"
-        android:enabled="false" />
-
-    <EditText
         android:id="@+id/edtNotaFinal_res"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtNotaFinal_res"
         android:inputType="numberDecimal"
-        android:enabled="false" />
+        android:enabled="false"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/txtResultado_res"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtNotaFinal_res"
-        android:textStyle="bold" />
+        android:gravity="center"
+        android:textSize="11pt"
+        android:textStyle="bold"
+        android:text="Congrats!"/>
 
     <Button
         android:id="@+id/btnVoltar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"
         android:layout_below="@+id/txtResultado_res"
         android:text="@string/strVoltar"
-        android:OnClick="btnVoltar"/>
+        android:onClick="btnVoltar" />
 
 </RelativeLayout>
