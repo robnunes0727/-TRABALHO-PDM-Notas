@@ -103,4 +103,9 @@ public class Notas extends AppCompatActivity {
         // Volta a activity
         super.onBackPressed();
     }
+
+    public void btnCreditos(View v){
+        Intent intent = new Intent(v.getContext(), Creditos.class);
+        startActivity(intent);
+    }
 }

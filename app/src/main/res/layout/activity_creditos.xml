@@ -76,13 +76,25 @@
         android:text="@string/btnRepo_cred"
         android:onClick="btnGithub" />
 
+    <!-- Botão Apagar -->
+    <Button
+        android:id="@+id/btnApagar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bntRepo_cred"
+        android:layout_marginTop="50dp"
+        android:text="@string/btnApagar"
+        android:onClick="apagarPrefs"
+        android:enabled="true"/>
+
     <!-- Botão voltar -->
     <Button
         android:id="@+id/bntVoltar_cred"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/bntRepo_cred"
-        android:text="@string/strVoltar"
-        android:onClick="btnVoltar" />
+        android:onClick="btnVoltar"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/strVoltar" />
 
 </RelativeLayout>

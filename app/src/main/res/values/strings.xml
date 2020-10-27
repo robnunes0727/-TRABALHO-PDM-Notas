@@ -11,6 +11,7 @@
     <string name="txtHeader_cred">Créditos</string>
     <string name="txtMembros_cred"> Integrantes do Grupo: </string>
     <string name="btnRepo_cred">Repositório do Github</string>
+    <string name="btnApagar">Apagar todos as preferências</string>
 
     <!-- Atividade: Principal (MainActivity) -->
     <string name="txtRA">RA</string>
@@ -42,6 +43,7 @@
     <string name="txtNotaAF_notas">Nota AF</string>
     <string name="btnCalcular">Calcular Nota Final</string>
     <string name="btnVoltarDisciplinas">Alterar disciplinas</string>
+    <string name="txtCreditos">Creditos e opções</string>
 
     <!-- Atividade: Resultado -->
     <string name="txtDisciplina_res">Disciplina:</string>

@@ -62,8 +62,20 @@
         android:id="@+id/btnVoltarDisciplinas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:text="@string/btnVoltarDisciplinas"
-        android:onClick="btnVoltarDisciplinas" />
+        android:onClick="btnVoltarDisciplinas"
+        android:layout_below="@id/btnCalcular"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textSize="9pt"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:text="@string/txtCreditos"
+        android:onClick="btnCreditos"
+        android:clickable="true" />
 
 </RelativeLayout>
