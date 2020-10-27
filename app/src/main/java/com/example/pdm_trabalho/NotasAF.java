@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class NotasAF extends AppCompatActivity {
 
@@ -49,6 +50,10 @@ public class NotasAF extends AppCompatActivity {
                 // Recebendo o valor da AF
                 double notaAF = Double.parseDouble(edtNotaAF.getText().toString());
 
+                if (notaAF > 5 || notaAF < 0) {
+                    Toast.makeText(v.getContext(), R.string.toastErroNota, Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 // Calculo a nota final
                 double notaFinal = notaA1 + notaA2;
                 double notaA1AF = notaA1 + notaAF;

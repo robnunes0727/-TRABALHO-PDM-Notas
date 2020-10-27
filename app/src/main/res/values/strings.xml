@@ -1,5 +1,5 @@
 <resources>
-    <!-- Comum, prefixar com str -->
+    <!-- Geral -->
     <string name="app_name">PDM - Notas</string>
     <string name="strVoltar">Voltar</string>
     <string name="strAvancar">Avançar</string>
@@ -12,6 +12,7 @@
     <string name="txtMembros_cred"> Integrantes do Grupo: </string>
     <string name="btnRepo_cred">Repositório do Github</string>
     <string name="btnApagar">Apagar todos as preferências</string>
+    <string name="toastApagarPrefs">Todas as preferências salvas deste aplicativo foram apagadas!</string>
 
     <!-- Atividade: Principal (MainActivity) -->
     <string name="txtRA">RA</string>
@@ -29,7 +30,6 @@
         <item>Administração</item>
         <item>Engenharia de Computação</item>
     </string-array>
-
 
     <!-- Atividade: Disciplinas -->
     <string name="btnInserir">Inserir</string>
@@ -54,5 +54,15 @@
     <string name="txtAf">Avaliacao Final</string>
     <string name="btnAF">Calcular AF</string>
 
+    <!-- Erros -->
+    <string name="toastErroRA">RA vazio!</string>
+    <string name="toastErroNome">Nome vazio!</string>
+    <string name="toastErroTurma">Turma vazio!</string>
+    <string name="toastErroCurso">Selecione um curso!</string>
+    <string name="toastErroNota">Nota inválida!</string>
+    <string name="toastErroNotas">Notas inválidas!</string>
+    <string name="toastErroCampos">Campos vazios!</string>
+    <string name="toastErroCampo">Campo vazio!</string>
+    <string name="toastErroDisciplinaCadastrada">ERRO: Nenhuma disciplina cadastrada</string>
 
 </resources>

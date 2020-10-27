@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -33,7 +32,7 @@ public class Creditos extends AppCompatActivity {
     public void apagarPrefs(View v){
         SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("com.example.pdm_trabalho.PREFERENCE_FILE_KEY", Context.MODE_PRIVATE);
         sharedPref.edit().clear().apply();
-        Toast.makeText(v.getContext(), "Todas as preferências salvas deste aplicativo foram apagadas!", Toast.LENGTH_LONG).show();
+        Toast.makeText(v.getContext(), R.string.toastApagarPrefs, Toast.LENGTH_LONG).show();
         finishAffinity();
         Intent main = new Intent(v.getContext(), MainActivity.class);
         startActivity(main);

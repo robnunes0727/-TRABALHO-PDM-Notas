@@ -28,7 +28,6 @@ public class Disciplinas extends ListActivity {
 
         // Coloca o componente na variavel
         edtDisciplina = findViewById(R.id.edtDisciplina);
-        Intent intent = getIntent();
 
         // Abre as SharedPrefs
         SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("com.example.pdm_trabalho.PREFERENCE_FILE_KEY", Context.MODE_PRIVATE);
@@ -63,7 +62,7 @@ public class Disciplinas extends ListActivity {
             atualizarLista();
         } else {
             edtDisciplina.setText("");
-            Toast.makeText(view.getContext(), "Campo vazio!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(view.getContext(), R.string.toastErroCampo, Toast.LENGTH_SHORT).show();
         }
     }
 

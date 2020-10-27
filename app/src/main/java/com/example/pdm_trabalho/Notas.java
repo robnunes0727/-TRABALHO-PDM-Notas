@@ -12,7 +12,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -47,15 +46,15 @@ public class Notas extends AppCompatActivity {
         // Testa o conteúdo do Set
         if(discSet != null && !discSet.isEmpty()){
             // Transforma Set em lista e então lista em adapter
-            ArrayList<String> discList = new ArrayList<String>(discSet);
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, discList);
+            ArrayList<String> discList = new ArrayList<>(discSet);
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, discList);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
             // Insere adapter no spinner
             spnDisciplina.setAdapter(adapter);
         } else {
             // Se não vier nada, fechar o programa
-            Toast.makeText(this, "ERRO: Nenhuma disciplina cadastrada", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.toastErroDisciplinaCadastrada, Toast.LENGTH_LONG).show();
             finish();
         }
 
@@ -67,7 +66,7 @@ public class Notas extends AppCompatActivity {
 
                 // Checa se vazio
                 if (n1.isEmpty() || n2.isEmpty()) {
-                    Toast.makeText(v.getContext(), "Campos vazios!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(), R.string.toastErroCampos, Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -77,7 +76,7 @@ public class Notas extends AppCompatActivity {
 
                 // Checa se os valores são válidos
                 if (NotaA1 < 0 ||NotaA1 > 5 || NotaA2 < 0 || NotaA2 > 5) {
-                    Toast.makeText(v.getContext(), "Notas inválidas!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(), R.string.toastErroNotas, Toast.LENGTH_SHORT).show();
                     return;
                 }
 

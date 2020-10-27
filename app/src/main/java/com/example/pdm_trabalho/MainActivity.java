@@ -12,8 +12,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.util.Set;
-
 public class MainActivity extends AppCompatActivity {
 
     private EditText edtRA;
@@ -69,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         if(!numRA.isEmpty())
             editor.putString("ra_aluno", numRA);
         else {
-            Toast.makeText(v.getContext(), "RA vazio!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(v.getContext(), R.string.toastErroRA, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -78,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         if (!nome.isEmpty())
             editor.putString("nome_aluno", nome);
         else {
-            Toast.makeText(v.getContext(), "Nome vazio!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(v.getContext(), R.string.toastErroNome, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -87,16 +85,17 @@ public class MainActivity extends AppCompatActivity {
         if (!turma.isEmpty())
             editor.putString("turma_aluno", turma);
         else {
-            Toast.makeText(v.getContext(), "Turma vazio!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(v.getContext(), R.string.toastErroTurma, Toast.LENGTH_SHORT).show();
             return;
         }
 
         // Puxa texto, grava senão estiver vazio
         String curso = cmbCurso.getSelectedItem().toString().trim();
-        if (!curso.equals("-- SELECIONE --") && !curso.isEmpty())
+        String[] arr = getResources().getStringArray(R.array.cursos_array);
+        if (!curso.equals(arr[0]) && !curso.isEmpty())
             editor.putString("curso_aluno", curso);
         else {
-            Toast.makeText(v.getContext(), "Selecione um curso!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(v.getContext(), R.string.toastErroCurso, Toast.LENGTH_SHORT).show();
             return;
         }
         editor.apply();
