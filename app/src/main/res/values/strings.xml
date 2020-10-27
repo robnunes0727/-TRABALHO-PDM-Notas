@@ -50,8 +50,7 @@
     <string name="txtAprovado">Aprovado</string>
     <string name="txtReprovado">Reprovado</string>
     <string name="txtAf">Avaliacao Final</string>
-
-
+    <string name="btnAF">Calcular AF</string>
 
 
 </resources>
