@@ -24,15 +24,6 @@
         android:textSize="15sp"
         android:layout_marginStart="5dp"
         android:text="@string/txtMembros_cred" />
-
-    <!-- Strut vazio só para ter referencia de esquerda e direita -->
-    <View android:id="@+id/strut_cred"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_below="@id/txtMembros_cred"
-        android:visibility="invisible"
-        android:layout_centerHorizontal="true"/>
-
     <!-- Nome dos Membros -->
     <EditText
         android:id="@+id/edtNomes_cred"
@@ -40,39 +31,19 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/txtMembros_cred"
         android:ems="10"
-        android:gravity="end"
         android:inputType="textMultiLine"
         android:enabled="false"
-        android:textAlignment="gravity"
-        android:layout_alignEnd="@id/strut_cred"
-        android:layout_alignParentStart="true"
+        android:textAlignment="center"
         android:hint="Greyce Besinger\nHeloíza Bartulic\nNicholas Henrique\nRoberto Nunes\nVictor Brossa"
         android:text="Greyce Besinger\nHeloíza Bartulic\nNicholas Henrique\nRoberto Nunes\nVictor Brossa"
         tools:ignore="Autofill, HardcodedText" />
-
-    <!-- RGM dos Membros -->
-    <EditText
-        android:id="@+id/edtRGM_cred"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/edtNomes_cred"
-        android:layout_below="@id/txtMembros_cred"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        android:enabled="false"
-        android:layout_alignParentEnd="true"
-        android:hint="00000000\n00000000\n00000000\n21267588\n00000000"
-        android:text="00000000\n00000000\n00000000\n21267588\n00000000"
-        tools:ignore="Autofill,HardcodedText" />
-                   <!-- Greyce\n Heloiza\nNicholas\n Roberto\n  Victor -->
 
     <!-- Botão GitHub -->
     <Button
         android:id="@+id/bntRepo_cred"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edtRGM_cred"
+        android:layout_below="@id/edtNomes_cred"
         android:text="@string/btnRepo_cred"
         android:onClick="btnGithub" />
 
