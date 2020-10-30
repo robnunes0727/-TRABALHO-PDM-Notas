@@ -5,7 +5,7 @@ Link para a documentação: https://robnunes0727.github.io/-TRABALHO-PDM-Notas/
 
 Membros do Grupo
  - Greyce Besinger Oliveira
- - H
- - N
+ - Heloiza
+ - Nicholas
  - Roberto Nunes
- - V
+ - Victor
